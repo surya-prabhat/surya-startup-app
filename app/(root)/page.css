@@ -1,0 +1,81 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1440px;
+    height: fit-content;
+    padding:  40px 32px 150px ;
+    position: relative;
+}
+
+.website-desc {
+    width: 43.125rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.875rem;
+    margin-top: 9.375rem;
+}
+
+.tagline {
+    font-weight: 700;
+    line-height: 4.375rem;
+    font-size: 3.25rem;
+}
+
+.defination {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    text-align: justify;
+}
+
+.image-cards {
+    display: flex;
+    gap: 24px;
+    position: relative;
+}
+
+.image-holder {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.image-holder:nth-of-type(1) {
+    position: absolute;
+    right: 25.938rem;
+    top: 18.75rem;
+}
+
+.image-holder:nth-of-type(2) {
+    position: absolute;
+    right: 13.125rem;
+    top: 8.75rem;
+}
+
+.purple-grad {
+    width: 23.125rem;
+    height: 23.125rem;
+    background-color: #efceff;
+    opacity: 60%;
+    border-radius: 9999px;
+    box-shadow: 0  0  190px  10px  #e2a8ff;
+    position: absolute;
+    z-index: -1;
+    right: -1.625rem;
+    top: 28.875rem;
+}
+
+.yellow-grad {
+    width: 23.125rem;
+    height: 23.125rem;
+    background-color: #ffe89e;
+    opacity: 44%;
+    box-shadow: 0 0 190px 10px #ffd342;
+    border-radius: 999px;
+    position: absolute;
+    z-index: -1;
+    top:  1.875rem;
+    left: -3rem;
+}

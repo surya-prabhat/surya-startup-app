@@ -42,7 +42,7 @@ async function NavBar() {
                             "use server"
                             await signIn("github")
                         }}>
-                            <button className="sign-in" type="submit">Sign-In</button>
+                            <button className="sign-in" type="submit">Sign-in</button>
                         </form>
 
                     )}
