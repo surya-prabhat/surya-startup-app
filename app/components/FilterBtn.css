@@ -1,0 +1,25 @@
+.filter-btns {
+    margin: 28px 32px 0px;
+}
+
+.filter-btn-container {
+    display: flex;
+    gap: 12px;
+}
+
+.filter-button-inactive {
+    background-color: white;
+    width: 6.25rem;
+    height: 3rem;
+    font-size: 20px;
+    border-radius: 16px;
+}
+
+.filter-button-active {
+    background-color: #f472b6;
+    color: #FAF4EF;
+    width: 6.25rem;
+    height: 3rem;
+    font-size: 20px;
+    border-radius: 16px;
+}

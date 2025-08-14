@@ -25,6 +25,7 @@ function SearchBar() {
                 />
 
                 <button
+                className="search-btn"
                 type="submit"><Search className="search-icon"/></button>
             </form>
             

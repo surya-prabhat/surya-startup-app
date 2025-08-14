@@ -19,7 +19,7 @@ input:focus {
     outline: none;
 }
 
-button {
+.search-btn {
     height: 3rem;
     width: 3rem;
     background-color: #652fc3;
