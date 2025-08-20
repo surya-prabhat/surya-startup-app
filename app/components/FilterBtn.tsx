@@ -4,29 +4,25 @@ import "./FilterBtn.css"
 import React from "react";
 import { useState } from "react";
 
+interface FilterProps {
+    activeFilter: string;
+    setActiveFilter: (filter: string) => void
+}
 
-
-function FilterBtn() {
-
-    const [activeFilter, setActiveFilter] = useState('newest')
-
-    const handleFilterClick = (filter: string) => {
-        setActiveFilter(filter)
-        // Filter logic to be added
-    }
+function FilterBtn({activeFilter, setActiveFilter}: FilterProps) {
 
     return (
         <div className="filter-btns">
             <div className="filter-btn-container">
                 <button
-                onClick={() => handleFilterClick('newest')}
+                onClick={() => setActiveFilter('newest')}
                 className= {`${activeFilter === 'newest' ? ("filter-button-active"): ("filter-button-inactive")}`}
                 >
                     Newest
                 </button>
 
                 <button
-                onClick={() => handleFilterClick('popular')}
+                onClick={() => setActiveFilter('popular')}
                 className= {`${activeFilter === 'popular' ? ("filter-button-active"): ("filter-button-inactive")}`}
                 >
                     Popular

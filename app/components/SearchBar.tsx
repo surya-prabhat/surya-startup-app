@@ -4,24 +4,27 @@ import { useState } from "react";
 import "./SearchBar.css"
 import { Search } from "lucide-react";
 
+interface SearchBarProps {
+    
+    inputQuery: string
+    onInputChange: (query: string) => void
+    onSearchSubmit: (event: React.FormEvent) => void
+}
+
+function SearchBar({ inputQuery, onInputChange, onSearchSubmit}: SearchBarProps) {
 
 
-function SearchBar() {
 
-    const [searchTerm, setSearchTerm] = useState("")
-
-    const handleSearch = (event: React.FormEvent) => {
-        event?.preventDefault()
-    }
+    
 
     return (
         <>
-            <form className="search-form" onSubmit={handleSearch}>
+            <form className="search-form" onSubmit={onSearchSubmit}>
                 <input 
                 type="text"
                 placeholder="Search"
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)} 
+                value={inputQuery}
+                onChange={(e) => onInputChange(e.target.value)} 
                 />
 
                 <button

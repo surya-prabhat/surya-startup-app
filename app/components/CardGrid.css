@@ -5,3 +5,10 @@
     font-weight: 500;
     margin-top: 32px;
 }
+
+.cardComponent-grid {
+    margin: 1rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
