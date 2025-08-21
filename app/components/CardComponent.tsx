@@ -7,6 +7,7 @@ import { ChevronLeft, ChevronRight, Eye, ArrowBigUp } from "lucide-react";
 import React, { useState } from "react";
 import { auth } from "../auth";
 import { useResizeFontOnOverflow } from "../hooks/useResizeFontOnOverflow";
+import Link from "next/link";
 
 interface CardProps {
     title: string;
@@ -22,10 +23,8 @@ interface CardProps {
         imageSrc: string;
         imageAlt: string
     }
-    authorImg: {
-        imageSrc: string;
-        imageAlt: string;
-    }
+    authorImg: string
+    startupId: string
 }
 
 
@@ -40,10 +39,11 @@ const CardComponent: React.FC<CardProps> = ({
     authorName,
     viewCount,
     companyImg,
-    authorImg
+    authorImg,
+    startupId
 }) => {
 
-    const {elementRef, fontSize} = useResizeFontOnOverflow()
+    const { elementRef, fontSize } = useResizeFontOnOverflow()
 
     const [currentIndex, setCurrentindex] = useState(0)
 
@@ -59,8 +59,10 @@ const CardComponent: React.FC<CardProps> = ({
     return (
         <div className="cardComponent">
             <div className="company-info">
-                <div  className="company-name-img">
-                    <h3 className="company-name">{title}</h3>
+                <div className="company-name-img">
+                    <Link  href={`/startups/${startupId}`}>
+                        <h3 className="company-title">{title}</h3>
+                    </Link>
                     <div className="company-img">
                         <Image
                             className="object-cover"
@@ -105,8 +107,8 @@ const CardComponent: React.FC<CardProps> = ({
                 <div className="author-info">
                     <div className="author-image">
                         <Image
-                            src={authorImg.imageSrc}
-                            alt={authorImg.imageAlt}
+                            src={authorImg}
+                            alt= "Author Image"
                             fill
                             className="object-cover"
                         />

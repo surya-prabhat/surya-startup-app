@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import { client } from "@/sanity/lib/client";
 import { startupQuery } from "@/sanity/lib/queries";
 import { start } from "repl";
+import { urlFor } from "@/sanity/lib/image";
 
 
 // const startupData = [
@@ -86,10 +87,7 @@ interface Startup {
     images: { imageUrl: string; alt: string }[];
     authorName: string;
     authorHandle: string;
-    authorImage: {
-        imageUrl: string;
-        alt: string;
-    }
+    authorImage: string;
     viewCount: number;
     publishedAt: string;
     banner: {
@@ -146,6 +144,7 @@ function CardGrid({searchQuery}: CardGridProps) {
 
             <div className="cardComponent-grid">
                 {sortedData.map((startup) => (
+
                     <CardComponent 
                         key={startup._id}
                         title={startup.title}
@@ -157,14 +156,12 @@ function CardGrid({searchQuery}: CardGridProps) {
                         authorName={startup.authorName}
                         authorHandle={startup.authorHandle}
                         viewCount={startup.viewCount}
-                        authorImg={{
-                            imageSrc: startup.authorImage.imageUrl,
-                            imageAlt: startup.authorImage.alt
-                        }}
+                        authorImg= {startup.authorImage}
                         companyImg={{
                             imageSrc: startup.banner.imageUrl,
                             imageAlt: startup.banner.alt
                         }}
+                        startupId={startup._id}
                     />
                 ))}
             </div>

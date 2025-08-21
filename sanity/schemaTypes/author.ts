@@ -22,9 +22,9 @@ export default defineType({
             type: 'url',
         }),
         defineField({
-            name: 'bio',
-            title: 'Bio',
-            type: 'text'
+            name: 'handle',
+            title: 'Handle',
+            type: 'string'
         })
         
     ]

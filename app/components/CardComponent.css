@@ -37,15 +37,20 @@
     position: relative;
 }
 
-.company-name {
+
+.company-title {
     font-size: 2rem;
     font-weight: 700;
     flex: 1;
     line-height: 2.5rem;
+    text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis
+    text-overflow: ellipsis;
+    width: 17rem;
 }
+
+
 
 .category {
     font-family: var(--font-inter);

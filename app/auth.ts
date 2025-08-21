@@ -48,7 +48,8 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
             _type: 'author',
             githubId: githubId,
             name: user.name,
-            profileImage: user.image
+            profileImage: user.image,
+            handle: githubId
           }
 
           await sanityClinet.create(newUserDoc)

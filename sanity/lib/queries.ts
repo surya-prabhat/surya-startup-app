@@ -10,10 +10,7 @@ export const startupQuery = `
     },
     "authorName": author->name,
     "authorHandle": author->handle,
-    "authorImage": author->image {
-      "imageUrl": asset->url,
-        alt
-    },
+    "authorImage": author->profileImage,
     viewCount,
     upvotes,
     comments,
