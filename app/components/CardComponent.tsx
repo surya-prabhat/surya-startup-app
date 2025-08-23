@@ -4,10 +4,13 @@ import "./CardComponent.css"
 import Image from "next/image";
 import { ChevronLeft, ChevronRight, Eye, ArrowBigUp } from "lucide-react";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { auth } from "../auth";
 import { useResizeFontOnOverflow } from "../hooks/useResizeFontOnOverflow";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+
+
 
 interface CardProps {
     title: string;
@@ -56,18 +59,42 @@ const CardComponent: React.FC<CardProps> = ({
     }
 
 
+    const updateViewCounter = async (startupId: string) => {
+        try {
+            await fetch('/api/viewCount', {
+                method: 'POST',
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ startupId })
+            })
+        } catch (error) {
+            console.log("An error occured, view count", error)
+        }
+    }
+
+    const router = useRouter()
+    const handleCLick = async(e: React.MouseEvent<HTMLAnchorElement>) =>{
+        e.preventDefault()
+
+       await updateViewCounter(startupId)
+
+       router.push(`startups/${startupId}`)
+    }
+
+
     return (
         <div className="cardComponent">
             <div className="company-info">
                 <div className="company-name-img">
-                    <Link  href={`/startups/${startupId}`}>
+                    <Link onClick={handleCLick} href={`/startups/${startupId}`}>
                         <h3 className="company-title">{title}</h3>
                     </Link>
                     <div className="company-img">
                         <Image
                             className="object-cover"
                             src={companyImg.imageSrc}
-                            alt={companyImg.imageAlt}
+                            alt="company img"
                             fill />
                     </div>
                 </div>
@@ -108,7 +135,7 @@ const CardComponent: React.FC<CardProps> = ({
                     <div className="author-image">
                         <Image
                             src={authorImg}
-                            alt= "Author Image"
+                            alt="Author Image"
                             fill
                             className="object-cover"
                         />

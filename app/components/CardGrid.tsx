@@ -121,6 +121,8 @@ function CardGrid({searchQuery}: CardGridProps) {
         fetchData()
     }, [])
 
+
+
     const filteredStartups = startups.filter(startup =>
         startup.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         startup.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -137,6 +139,8 @@ function CardGrid({searchQuery}: CardGridProps) {
         return 0
     })
 
+
+
     return (
         <div className="card-grid">
             <h2 className="all-startups">{searchQuery ? `Search Results for "${searchQuery}"` : "All Start-Ups"}</h2>
@@ -144,7 +148,7 @@ function CardGrid({searchQuery}: CardGridProps) {
 
             <div className="cardComponent-grid">
                 {sortedData.map((startup) => (
-
+                    
                     <CardComponent 
                         key={startup._id}
                         title={startup.title}

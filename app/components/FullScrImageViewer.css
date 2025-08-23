@@ -1,0 +1,62 @@
+.expanded-image {
+    width: 60rem;
+    height: 60rem;
+    overflow: hidden;
+    position: relative;
+    border-radius: 2rem;
+}
+
+.full-screen-viewer {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.idea-prev-button {
+    background-color: #919090;
+    padding: 30px 12px;
+    opacity: 30%;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.idea-prev-button:hover {
+    background-color: #652fc3;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    opacity: 100%;
+}
+
+.idea-next-button {
+    background-color: #919090;
+    padding: 30px 12px;
+    opacity: 30%;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.idea-next-button:hover {
+    background-color: #652fc3;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    opacity: 100%;
+}
+
+.idea-button-div {
+    z-index: 1;
+    position: absolute;
+    margin-top: 26.25rem;
+    gap: 54rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.idea-close {
+    text-align: center;
+    font-size: 2rem;
+    color: #000;
+}

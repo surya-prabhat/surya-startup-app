@@ -1,0 +1,13 @@
+.idea-image-holder {
+    width: 17rem;
+    height: 17rem;
+    overflow: hidden;
+    position: relative;
+    border-radius: 1.5rem;
+    margin-top: 2.5rem;
+}
+
+.image-stack {
+    display: flex;
+    gap: 0.25rem;
+}
