@@ -18,6 +18,15 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     })],
   secret: process.env.AUTH_SECRET,
   callbacks: {
+
+    async session({session, token}) {
+      if(token.name) {
+        session.user.name = token.name
+      }
+      return session
+    },
+
+
     async signIn({user, account, profile }) {
       try {
 
