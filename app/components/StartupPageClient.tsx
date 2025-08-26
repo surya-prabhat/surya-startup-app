@@ -6,6 +6,8 @@ import { startupQuery_byID} from "@/sanity/lib/queries"
 import StartupHeader from "./StartupHeader";
 import StartupImageStack from "./StartupImageStack";
 import FullScrImageViewer from "./FullScrImageViewer";
+import PitchDetails from "./PitchDetails";
+
 
 
 interface SanityImages {
@@ -20,6 +22,7 @@ interface Startup {
 interface StartupPageClientProps {
     startup: Startup
 }
+
 
 function StartupPageClient({ startup }: StartupPageClientProps) {
 
@@ -70,6 +73,9 @@ function StartupPageClient({ startup }: StartupPageClientProps) {
                     onClose={closeViewer}
                     />
             )}
+
+            <PitchDetails pitchDetails={startup.pitchDetails}/>
+
         </div>
     );
 }

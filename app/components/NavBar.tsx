@@ -20,7 +20,7 @@ async function NavBar() {
                 <div className="auth">
                     {session ? (
                         <>
-                            <Link href="/startup/create">
+                            <Link href="/create">
                                 <span className="create">Create</span>
                             </Link>
 

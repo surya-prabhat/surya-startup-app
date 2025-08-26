@@ -75,6 +75,12 @@ export default defineType({
                     type: 'string'
                 })
             ]
+        }),
+        defineField({
+            name: 'pitchDetails',
+            title: 'Pitch Details',
+            type: 'array',
+            of: [{ type: 'block'}]
         })
 
     ]

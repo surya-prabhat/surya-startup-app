@@ -45,6 +45,7 @@ export const startupQuery_byID = groq`
     "banner": banner {
         "imageUrl": asset->url,
         alt
-    }
+    },
+    pitchDetails
   }
 `
