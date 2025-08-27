@@ -4,6 +4,7 @@ import { client, mutationClient } from "@/sanity/lib/client";
 import { arrayBuffer } from "stream/consumers";
 import { title } from "process";
 import { assert } from "console";
+import { PortableTextBlock } from "@portabletext/react";
 
 
 export async function POST(req: Request) {
@@ -20,7 +21,7 @@ export async function POST(req: Request) {
         const description = formData.get('description') as string
         const logoFile = formData.get('logo') as File | null
         const imageFiles = formData.getAll('images') as File[]
-        const pitchDetails = formData.get('pitchDetails') as string
+        const pitchDetailsString = formData.get('pitchDetails') as string
 
         if (!name || !description || !category || !logoFile) {
             return NextResponse.json({ message: 'Missing required fields'}, {status: 400})
@@ -45,15 +46,17 @@ export async function POST(req: Request) {
             imageAssets.push({_type: 'image', asset: {_ref: assetResponse._id}})
         }
 
+        const pitchDetails: PortableTextBlock[] = JSON.parse(pitchDetailsString)
+
         const newStartup = {
             _type: 'startup',
             title: name, description, category,
             banner: bannerAsset? {_type: 'image', asset: {_ref: bannerAsset._id}} : undefined,
             images: imageAssets,
-            pitchDetails: JSON.parse(pitchDetails),
             author: {_ref: author._id},
             viewCount: 0,
-            publishedAt: new Date().toISOString()
+            publishedAt: new Date().toISOString(),
+            pitchDetails: pitchDetails
         }
 
         const result = await mutationClient.create(newStartup)

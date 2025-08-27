@@ -9,10 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@portabletext/block-tools": "^3.4.0",
+    "@portabletext/editor": "^2.6.4",
     "@portabletext/react": "^4.0.1",
     "@sanity/image-url": "^1.1.0",
+    "@sanity/types": "^4.6.0",
     "@sanity/vision": "^4.3.0",
     "axios": "^1.11.0",
+    "draft-js": "^0.11.7",
+    "draftjs-to-html": "^0.9.1",
+    "immutable": "^4.3.7",
     "lucide-react": "^0.539.0",
     "next": "15.4.6",
     "next-auth": "^5.0.0-beta.29",
@@ -20,6 +26,9 @@
     "postcss": "^8.5.6",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-draft-wysiwyg": "^1.15.0",
+    "react-portable-text": "^0.6.0",
+    "react-quill-new": "^3.6.0",
     "sanity": "^4.3.0",
     "styled-components": "^6.1.19"
   },
@@ -31,9 +40,11 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4.1.11",
+    "@types/draftjs-to-html": "^0.8.4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/react-draft-wysiwyg": "^1.13.8",
     "eslint": "^9",
     "eslint-config-next": "15.4.6",
     "tailwindcss": "^4.1.11",

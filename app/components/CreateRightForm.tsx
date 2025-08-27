@@ -1,10 +1,16 @@
 'use client'
 
-import { FormEvent, useState } from "react";
+import { FormEvent, useCallback, useState } from "react";
 import "./CreateRightForm.css"
 import { PortableTextBlock } from "@portabletext/react";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import { PortableText } from "next-sanity";
+import dynamic from "next/dynamic";
+import ReactQuill from 'react-quill-new'
+import 'react-quill-new/dist/quill.snow.css';
+import { convertHtmlToPortableText } from "../utils/portableTextConvertor";
+
 
 interface UserSession {
     user?: {
@@ -21,7 +27,7 @@ interface FormState {
     category: string;
     description: string;
     images: File[]
-    pitchDetails: PortableTextBlock[]
+    pitchDetails: string
 }
 
 const initialState: FormState = {
@@ -29,12 +35,13 @@ const initialState: FormState = {
     category: '',
     description: '',
     images: [],
-    pitchDetails: [],
+    pitchDetails: '',
+
 }
 
-interface FormProps {
-    session: UserSession | null
-}
+// Simple function to convert HTML to Portable Text blocks
+
+
 
 function CreateRightForm() {
 
@@ -42,12 +49,14 @@ function CreateRightForm() {
     const [logo, setLogo] = useState<File | null>(null)
     const router = useRouter()
 
-
+    const handlePitchDetailsChange = (html: string) => {
+        setForm(prevForm => ({...prevForm, pitchDetails: html}))
+    }
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault()
 
-        console.log("Description:", form.description)
+        const blocks = convertHtmlToPortableText(form.pitchDetails)
 
 
         const formData = new FormData()
@@ -58,7 +67,7 @@ function CreateRightForm() {
             formData.append('logo', logo)
         }
         form.images.forEach((image) => formData.append('images', image))
-        formData.append('pitchDetails', JSON.stringify(form.pitchDetails))
+        formData.append('pitchDetails', JSON.stringify(blocks))
 
         try {
             const response = await fetch('/api/create-startup', {
@@ -131,6 +140,15 @@ function CreateRightForm() {
                 accept="image/*"
                 multiple
                 onChange={(e) => setForm({...form, images: Array.from(e.target.files!).slice(0,5)})} />
+            </div>
+
+            <div>
+                <label htmlFor="pitchDetails">Pitch Details</label>
+                <ReactQuill
+                theme="snow"
+                value={form.pitchDetails}
+                onChange={handlePitchDetailsChange}
+                />
             </div>
 
             <button type="submit">Submit Pitch</button>
