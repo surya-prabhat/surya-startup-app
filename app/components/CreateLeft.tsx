@@ -32,11 +32,6 @@ function CreateLeft() {
                         imageSrc="/cherful-positive-young-colleagues-using-laptop-computer.jpg"
                         altText="Startup Desc image"
                     />
-
-                    <ImageCard
-                        imageSrc="/cherful-positive-young-colleagues-using-laptop-computer.jpg"
-                        altText="Startup Desc image"
-                    />
                 </div>
             </div>
 

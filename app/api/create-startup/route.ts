@@ -12,7 +12,7 @@ export async function POST(req: Request) {
         const session = await auth()
 
         if (!session || !session?.user || !session?.user?.name) {
-            return NextResponse.json({message: 'unauthorized'}, {status: 401})
+            return NextResponse.json({ message: 'unauthorized' }, { status: 401 })
         }
 
         const formData = await req.formData()
@@ -24,36 +24,35 @@ export async function POST(req: Request) {
         const pitchDetailsString = formData.get('pitchDetails') as string
 
         if (!name || !description || !category || !logoFile) {
-            return NextResponse.json({ message: 'Missing required fields'}, {status: 400})
+            return NextResponse.json({ message: 'Missing required fields' }, { status: 400 })
         }
 
         const author = await mutationClient.fetch(`*[_type == 'author' && handle == $handle][0]`,
-            {handle: session.user.name}
+            { handle: session.user.name }
         )
 
-        let bannerAsset
-        if (logoFile) {
-            const arrayBuffer = await logoFile.arrayBuffer()
-            const buffer = Buffer.from(arrayBuffer)
-            bannerAsset = await mutationClient.assets.upload('image', buffer, {filename: logoFile.name})
-        }
+        const uploadPromises = [
+            logoFile ? mutationClient.assets.upload('image', Buffer.from(await logoFile.arrayBuffer()), { filename: logoFile.name }) : Promise.resolve(null),
+            ...imageFiles.map(async file => mutationClient.assets.upload('image', Buffer.from(await file.arrayBuffer()), { filename: file.name }))
+        ]
 
-        const imageAssets = []
-        for (const file of imageFiles) {
-            const arrayBuffer = await file.arrayBuffer()
-            const buffer = Buffer.from(arrayBuffer)
-            const assetResponse = await mutationClient.assets.upload('image', buffer, {filename: file.name})
-            imageAssets.push({_type: 'image', asset: {_ref: assetResponse._id}})
-        }
+        const [bannerAsset, ...imageAssets] = await Promise.all(uploadPromises)
+
+        const finalImageAssets = imageAssets.filter(Boolean).map(asset => ({
+            _type: 'image',
+            asset: {
+                _ref: asset!._id
+            }
+        }));
 
         const pitchDetails: PortableTextBlock[] = JSON.parse(pitchDetailsString)
 
         const newStartup = {
             _type: 'startup',
             title: name, description, category,
-            banner: bannerAsset? {_type: 'image', asset: {_ref: bannerAsset._id}} : undefined,
-            images: imageAssets,
-            author: {_ref: author._id},
+            banner: bannerAsset ? { _type: 'image', asset: { _ref: bannerAsset._id } } : undefined,
+            images: finalImageAssets,
+            author: { _ref: author._id },
             viewCount: 0,
             publishedAt: new Date().toISOString(),
             pitchDetails: pitchDetails
@@ -61,10 +60,10 @@ export async function POST(req: Request) {
 
         const result = await mutationClient.create(newStartup)
 
-        return NextResponse.json({message: 'startup SUccessfully Created', startupId: result._id}, {status: 200})
+        return NextResponse.json({ message: 'startup SUccessfully Created', startupId: result._id }, { status: 200 })
 
     } catch (error) {
         console.log("Error Creating Startup", error)
-        return NextResponse.json({message: 'Failed to Create Startup'}, {status: 500})
+        return NextResponse.json({ message: 'Failed to Create Startup' }, { status: 500 })
     }
 }

@@ -1,3 +1,131 @@
 .create-right {
     flex: 1;
 }
+
+.create-right-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-left: 2rem;
+    gap: 1.25rem;
+}
+
+
+.pitch-your-idea {
+    font-size: 2rem;
+    margin-right: auto;
+    margin-top: 0.75rem;
+    font-weight: 700;
+}
+
+.create-right-namecat {
+    border: 3px solid #E5D6FF;
+    height: 3.25rem;
+    width: 91%;
+    margin-left: 0px;
+    border-radius: 999px;
+
+}
+
+.create-right-namecat:focus {
+    outline: none;
+}
+
+.form-namecat {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.25rem;
+}
+
+.create-right-logo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+    position: relative;
+}
+
+.form-description {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+    position: relative;
+}
+
+.create-right-namecat,
+textarea {
+    padding-left: 20px;
+    font-size: 20px;
+    font-style: var(--font-inter);
+}
+
+.create-right-description {
+    border: 3px solid #E5D6FF;
+    height: 3.25rem;
+    width: 91%;
+    margin-left: 0px;
+    border-radius: 1.25rem;
+}
+
+.create-right-description:focus {
+    outline: none;
+}
+
+.create-right-description,
+textarea {
+    padding-top: 0.5rem;
+    padding-right: 1.125rem;
+    font-size: 20px;
+    font-style: var(--font-inter);
+}
+
+.quill {
+    width: 38rem;
+    height: 9rem;
+}
+
+.create-right-label {
+    font-size: 1.25rem;
+}
+
+.submit-button {
+    margin-top: 3.5rem;
+    width: 91%;
+    margin-right: auto;
+    background-color: #fcd34d;
+    padding: 0.75rem;
+    border-radius: 999px;
+    transition: all 0.2s cubic-bezier(0.44, 0, 0.56, 1);
+    font-size: 1.25rem;
+    font-family: var(--font-inter);
+}
+
+.submit-button:hover {
+    background-color: #652fc3;
+    color: #faf4ef;
+}
+
+.file-name {
+    margin-left: 10px;
+    color: #666;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: absolute;
+    top: 3.375rem;
+    left: 0.5rem;
+    width: fit-content;
+}
+
+#logo {
+    color: #faf4ee;
+}
+
+#images {
+    color: #faf4ee;
+}
