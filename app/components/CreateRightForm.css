@@ -6,7 +6,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 98%;
     margin-left: 2rem;
     gap: 1.25rem;
 }
@@ -22,7 +22,7 @@
 .create-right-namecat {
     border: 3px solid #E5D6FF;
     height: 3.25rem;
-    width: 91%;
+    width: 100%;
     margin-left: 0px;
     border-radius: 999px;
 
@@ -66,7 +66,7 @@ textarea {
 .create-right-description {
     border: 3px solid #E5D6FF;
     height: 3.25rem;
-    width: 91%;
+    width: 100%;
     margin-left: 0px;
     border-radius: 1.25rem;
 }
@@ -84,7 +84,7 @@ textarea {
 }
 
 .quill {
-    width: 38rem;
+    width: 39.75rem;
     height: 9rem;
 }
 
@@ -94,7 +94,7 @@ textarea {
 
 .submit-button {
     margin-top: 3.5rem;
-    width: 91%;
+    width: 100%;
     margin-right: auto;
     background-color: #fcd34d;
     padding: 0.75rem;
@@ -128,4 +128,10 @@ textarea {
 
 #images {
     color: #faf4ee;
+}
+
+@media (max-content: 1024px) {
+    .create-right-form {
+        margin-left: 0px;
+    }
 }

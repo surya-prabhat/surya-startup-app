@@ -1,5 +1,16 @@
 .create-page {
     margin: 2.5rem 2rem 2.5rem;
     display: flex;
-    width: 100%;
+    width: fit-content;
+}
+
+
+@media (max-width: 1024px) {
+    .create-page {
+        flex-direction: column;
+        gap: 10rem;
+    }
+    body {
+        width: max-content;
+    }
 }

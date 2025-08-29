@@ -7,7 +7,7 @@
     align-items: center;
 }
 
-input {
+.search-input {
     width: 90%;
     height: 100%;
     border-radius: 999px;
@@ -32,5 +32,29 @@ input:focus {
 }
 .search-icon {
     color: white;
+    width: 50px;
+}
 
+@media (max-width: 425px) {
+
+    .search-form {
+        height: 8rem;
+    }
+
+    .search-input {
+        font-size: 3rem;
+        margin-left: 3.75rem;
+    }
+
+    .search-btn {
+        margin-right: 0.75rem;
+        margin-left: 0px;
+        height: 6rem;
+        width: 7rem;
+    }
+
+    .search-icon {
+        width: 3rem;
+        height: 3rem;
+    }
 }

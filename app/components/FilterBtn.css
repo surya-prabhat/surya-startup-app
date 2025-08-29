@@ -23,3 +23,29 @@
     font-size: 20px;
     border-radius: 16px;
 }
+
+@media (max-width: 425px) {
+
+    .filter-btn-container {
+        justify-content: center;
+        gap: 2.5rem;
+    }
+
+    .filter-button-active {
+        width: 30.25rem;
+        height: 7rem;
+        font-size: 3rem;
+    }
+
+    .filter-button-inactive {
+        width: 30.25rem;
+        height: 7rem;
+        font-size: 3rem;
+    }
+
+    .filter-btns {
+        margin: 5rem 0rem 3rem;
+    }
+
+    
+}

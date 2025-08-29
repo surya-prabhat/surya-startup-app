@@ -36,7 +36,7 @@ export const convertHtmlToPortableText = (html: string): PortableTextBlock[] => 
             }
         } else if (node.nodeType === Node.ELEMENT_NODE) {
             const element = node as HTMLElement;
-            let newMarks = [...parentMarks];
+            const newMarks = [...parentMarks];
             let newBlockStyle = blockStyle;
 
             // Handle marks

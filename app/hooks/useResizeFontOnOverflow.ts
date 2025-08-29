@@ -10,7 +10,7 @@ export const useResizeFontOnOverflow = () => {
     if (!element) return;
 
     const resizeObserver = new ResizeObserver(() => {
-      let currentFontSize = parseFloat(getComputedStyle(element).fontSize);
+      const currentFontSize = parseFloat(getComputedStyle(element).fontSize);
       let newSize = currentFontSize;
       
       while ((element.scrollWidth > element.clientWidth || element.scrollHeight > element.clientHeight) && newSize > 1) {

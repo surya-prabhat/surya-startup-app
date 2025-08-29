@@ -12,3 +12,18 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
+
+@media (max-width: 425px) {
+
+    .card-grid {
+        margin-top: 19.25rem;
+    }
+
+    .all-startups {
+        font-size: 5rem;
+    }
+
+    .cardComponent-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

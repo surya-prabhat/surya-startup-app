@@ -148,7 +148,7 @@ const CardComponent: React.FC<CardProps> = ({
                     </div>
                 </div>
 
-                <div className="views"><Eye /> {viewCount}</div>
+                <div className="views"><Eye className="eye"/> {viewCount}</div>
             </div>
 
             <button className="upvote">

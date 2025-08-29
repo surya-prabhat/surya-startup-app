@@ -63,3 +63,28 @@
     top:  -3.125rem;
     left: -5rem;
 }
+
+@media (max-width:1024px){
+    .create-left {
+        display: flex;
+        gap: 21.125rem;
+        margin-right: 0px;
+        align-items: center;
+    }
+
+    .create-left-header {
+        width: 39.375rem;
+    }
+
+    .purple-grad-create-left {
+        left: 49.375rem;
+        top: 28.75rem;
+    }
+
+    .quill {
+        width: 69.75rem;
+        height: 20rem;
+    }
+}
+
+

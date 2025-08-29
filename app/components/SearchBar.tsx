@@ -21,6 +21,7 @@ function SearchBar({ inputQuery, onInputChange, onSearchSubmit}: SearchBarProps)
         <>
             <form className="search-form" onSubmit={onSearchSubmit}>
                 <input 
+                className="search-input"
                 type="text"
                 placeholder="Search"
                 value={inputQuery}

@@ -14,10 +14,10 @@ function ImageCard({ imageSrc, altText }: ImageCardProps) {
         <div className="image-card">
             <div className="image">
                 <Image 
+                className="image-card-contain"
                 src={imageSrc}
                 alt={altText}
                 fill
-                style={{objectFit: 'cover'}}
                 />
 
 
