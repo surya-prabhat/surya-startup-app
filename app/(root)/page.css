@@ -1,8 +1,12 @@
+.container-main-page {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
 .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1440px;
     height: fit-content;
     padding: 5rem 2rem ;
     position: relative;

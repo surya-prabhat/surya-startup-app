@@ -24,13 +24,9 @@ body {
   color: var(--foreground);
   font-family: var(--font-space-grotesk), var(--font-inter);
   background-color: #faf4ef;
-  max-width: 1440px;
-  margin: 0 auto;
+
 
 }
 
-@media (max-width: 1024px) {
-  html {
-    width: fit-content;
-  }
-}
+
+
