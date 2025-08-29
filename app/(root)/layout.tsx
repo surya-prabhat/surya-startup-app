@@ -33,10 +33,9 @@ export default function RootLayout({
       <body
         className={`${spaceGroteck.variable} ${inter.variable} antialiased`}
       >
-        <main className="container-main-page">
+
           <NavBar />
           {children}
-        </main>
       </body>
     </html>
   );

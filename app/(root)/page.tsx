@@ -26,7 +26,7 @@ export default function Home() {
   }
 
   return (
-    <>
+    <main className="container-main-page">
       <div className="header">
         <div className="website-desc">
           <h1 className="tagline">Your Ideas and Vision, their Support — made simple.</h1>
@@ -71,6 +71,6 @@ export default function Home() {
         <div className="yellow-grad"></div>
       </div>
       <CardGrid searchQuery={searchQuery} />
-    </>
+    </main>
   );
 }
