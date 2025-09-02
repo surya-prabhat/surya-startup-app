@@ -92,3 +92,19 @@
         height: 40rem;
     }
 }
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .idea-close {
+        font-size: 1rem;
+    }
+
+    .idea-button-div {
+        margin-top: 15.25rem;
+        gap: 13rem;
+    }
+
+    .expanded-image {
+        width: 19rem;
+        height: 36rem;
+    }
+}

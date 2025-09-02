@@ -94,3 +94,29 @@
     hyphens: auto;
   }
 }
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .pitch-details h1 {
+    font-size: 1.5rem;
+  }
+
+  .pitch-details h2 {
+    font-size: 1.25rem;
+  }
+
+  .pitch-details p {
+    margin: 1.5rem 0rem;
+    text-align: justify;
+    hyphens: auto;
+  }
+
+  .pitch-details li {
+    text-align: justify;
+    hyphens: auto;
+    margin: 1.5rem 0rem;
+  }
+
+  .pitch-details ul {
+    padding-left: 0;
+  }
+}

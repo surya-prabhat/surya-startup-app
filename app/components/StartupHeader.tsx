@@ -34,7 +34,7 @@ function StartupHeader(
         <div className="idea-header">
             <div className="date-and-views">
                 <p className="idea-date">Published On: {new Date(publishedAt).toLocaleDateString()}</p>
-                <p className="idea-viewCount"><Eye /> {viewCount}</p>
+                <p className="idea-viewCount"><Eye className="eye-startup-page"/> {viewCount}</p>
             </div>
 
             <div className="idea-company-details">
