@@ -23,14 +23,32 @@
 }
 
 
-@media (max-width: 425px) {
-  .image-card-contain {
-    background-color: black;
-    object-fit: cover;
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .image-card {
+    width: 8.25rem;
+    height: 11.75rem;
+    border-radius: 1.125rem;
+
   }
+}
+
+
+@media (min-width: 320px) and (max-width: 424px) {
 
   .image-card {
-    width: 20.25rem;
-    height: 34.75rem;
+    width: 6.25rem;
+    height: 8.75rem;
+    border-radius: 0.5rem;
+  }
+
+
+}
+
+@media (min-width: 425px) and (max-width: 767px) {
+
+  .image-card {
+    width: 9.25rem;
+    height: 12.75rem;
+    border-radius: 0.5rem;
   }
 }

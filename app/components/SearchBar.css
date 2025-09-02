@@ -35,26 +35,47 @@ input:focus {
     width: 50px;
 }
 
-@media (max-width: 425px) {
+@media (min-width: 1024px) and (max-width: 1439px) {
+
+    .search-btn {
+        height: 2.5rem;
+        width: 2.5rem;
+        margin-right: 6px;
+    }
 
     .search-form {
-        height: 8rem;
+        height: 3rem;
     }
 
     .search-input {
-        font-size: 3rem;
-        margin-left: 3.75rem;
+        font-size: 1rem;
     }
 
     .search-btn {
-        margin-right: 0.75rem;
-        margin-left: 0px;
-        height: 6rem;
-        width: 7rem;
+        height: 2.5rem;
+        width: 2.5rem;
+        margin-right: 6px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px)  {
+    .search-form {
+        gap: 1.25rem;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .search-form {
+        height: 3rem;
     }
 
-    .search-icon {
-        width: 3rem;
-        height: 3rem;
+    .search-input {
+        font-size: 1rem;
+    }
+
+    .search-btn {
+        height: 2.5rem;
+        width: 2.5rem;
+        margin-right: 0.25rem;
     }
 }

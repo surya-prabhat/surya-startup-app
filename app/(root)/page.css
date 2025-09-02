@@ -1,7 +1,6 @@
-
 .container-main-page {
-  max-width: 1440px;
-  margin: 0 auto;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 .header {
@@ -9,7 +8,7 @@
     align-items: center;
     justify-content: space-between;
     height: fit-content;
-    padding: 5rem 2rem ;
+    padding: 5rem 2rem;
     position: relative;
 }
 
@@ -85,21 +84,95 @@
     left: -3rem;
 }
 
-@media (max-width: 425px) {
+@media (min-width: 1024px) and (max-width: 1439px) {
+
+    .website-desc {
+        width: 30.125rem;
+        gap: 1.25rem;
+    }
+
+    .tagline {
+        line-height: 3rem;
+        font-size: 2.25rem;
+    }
+
+    .defination {
+        font-size: 1rem;
+        line-height: 1.75rem;
+    }
+
+    .image-holder:nth-of-type(1) {
+        right: 18.25rem;
+        top: 18.75rem;
+    }
+
+    .image-holder:nth-of-type(2) {
+        right: 9.125rem;
+        top: 8.75rem;
+    }
+
+    .purple-grad {
+        top: 20.875rem;
+    }
+}
+
+@media (min-width: 1100px) and (max-width: 1439px) {
+
+
+    .website-desc {
+        width: 36.125rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
     .header {
-        display: flex;
         flex-direction: column;
-        gap: 5rem;
-        position: relative;
+        gap: 2rem;
+    }
+
+    .image-cards {
+        margin-left: auto;
+    }
+
+    .purple-grad {
+        top: 60.875rem;
     }
 
     .website-desc {
         width: 100%;
+    }
+
+    .tagline {
         text-align: center;
-        gap: 6rem;
+    }
+
+
+}
+
+@media (min-width: 320px) and (max-width: 424px) {
+
+    .header {
+        flex-direction: column;
+        padding: 0rem 1rem;
+        gap: 2rem;
+        margin-top: 4rem;
+    }
+
+    .website-desc {
+        width: 100%;
+        margin-top: 0px;
+    }
+
+    .tagline {
+        line-height: 3rem;
+        font-size: 2rem;
+        text-align: center;
     }
 
     .defination {
+        font-size: 1rem;
+        list-style: 1.75rem;
         text-align: center;
     }
 
@@ -108,22 +181,55 @@
     }
 
     .image-holder:nth-of-type(1) {
-        right: 43.938rem;
-        top: 51rem;
+        right: 14.25rem;
+        top: 10.75rem;
     }
 
     .image-holder:nth-of-type(2) {
-        right: 21.875rem;
-        top: 21rem;
+        right: 7.125rem;
+        top: 5.75rem;
+    }
+
+}
+
+@media (min-width: 425px) and (max-width: 767px) {
+
+    .header {
+        flex-direction: column;
+        padding: 0rem 1rem;
+        gap: 2rem;
+        margin-top: 4rem;
+    }
+
+    .website-desc {
+        width: 100%;
+        margin-top: 0px;
     }
 
     .tagline {
-        font-size: 7.25rem;
-        line-height: 9rem;
+        line-height: 3rem;
+        font-size: 2rem;
+        text-align: center;
     }
 
     .defination {
-        font-size: 3rem;
-        line-height: 5rem;
+        font-size: 1rem;
+        list-style: 1.75rem;
+        text-align: center;
     }
+
+    .image-cards {
+        margin-left: auto;
+    }
+
+    .image-holder:nth-of-type(1) {
+        right: 20.25rem;
+        top: 10.75rem;
+    }
+
+    .image-holder:nth-of-type(2) {
+        right: 10.125rem;
+        top: 5.75rem;
+    }
+
 }

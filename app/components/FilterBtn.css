@@ -24,28 +24,35 @@
     border-radius: 16px;
 }
 
-@media (max-width: 425px) {
-
-    .filter-btn-container {
-        justify-content: center;
-        gap: 2.5rem;
-    }
+@media (min-width: 1024px) and (max-width: 1439px) {
 
     .filter-button-active {
-        width: 30.25rem;
-        height: 7rem;
-        font-size: 3rem;
+        font-size: 1rem;
+        border: 0.75rem;
     }
 
     .filter-button-inactive {
-        width: 30.25rem;
-        height: 7rem;
-        font-size: 3rem;
+        font-size: 1rem;
+        border-radius: 0.75rem;
     }
+}
 
+@media (min-width: 320px) and (max-width: 767px) {
     .filter-btns {
-        margin: 5rem 0rem 3rem;
+        margin: 2rem 1rem 0px;
+        display: flex;
+        justify-content: center;
     }
 
-    
+    .filter-button-active {
+        height: 2.5rem;
+        font-size: 1rem;
+        border-radius: 0.75rem;
+    }
+
+    .filter-button-inactive {
+        height: 2.5rem;
+        font-size: 1rem;
+        border-radius: 0.75rem;
+    }
 }
