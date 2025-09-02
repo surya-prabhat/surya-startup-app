@@ -60,3 +60,35 @@
     font-size: 2rem;
     color: #000;
 }
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+    .idea-close {
+        font-size: 1.5rem;
+    }
+
+    .idea-button-div {
+        margin-top: 22.25rem;
+        gap: 44rem;
+    }
+
+    .expanded-image {
+        width: 50rem;
+        height: 50rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .idea-close {
+        font-size: 1.5rem;
+    }
+
+    .idea-button-div {
+        margin-top: 17.5rem;
+        gap: 34rem;
+    }
+
+    .expanded-image {
+        width: 40rem;
+        height: 40rem;
+    }
+}

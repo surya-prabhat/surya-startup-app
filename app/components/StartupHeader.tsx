@@ -48,7 +48,7 @@ function StartupHeader(
                             fill
                         />
                     </div>
-                    <h2 className="idea-name">{title}</h2>
+                    <h1 className="idea-name">{title}</h1>
                 </div>
 
                 <div className="idea-author-details">

@@ -106,3 +106,37 @@
     border-radius: 999px;
 
 }
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .idea-name {
+        font-size: 1.5rem;
+    }
+
+    .idea-company-img {
+        width: 4.25rem;
+        height: 4.25rem;
+    }
+
+    .idea-description {
+        font-size: 1rem;
+    }
+
+    .idea-author-img {
+        width: 2.75rem;
+        height: 2.75rem;
+    }
+
+    .idea-author {
+        font-size: 1rem;
+    }
+
+    .idea-category {
+        width: 14.5rem;
+        height: 2rem;
+        font-size: 0.8rem;
+    }
+
+    .idea-description-category {
+        gap: 7rem;
+    }
+}

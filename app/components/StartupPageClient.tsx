@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { client } from "@/sanity/lib/client"
-import { startupQuery_byID} from "@/sanity/lib/queries"
+import { startupQuery_byID } from "@/sanity/lib/queries"
 import StartupHeader from "./StartupHeader";
 import StartupImageStack from "./StartupImageStack";
 import FullScrImageViewer from "./FullScrImageViewer";
@@ -27,7 +27,7 @@ interface StartupPageClientProps {
 function StartupPageClient({ startup }: StartupPageClientProps) {
 
     console.log(startup)
-    
+
     const imageUrls = startup.images.map((image: SanityImages) => ({
         imageUrl: image.imageUrl,
         alt: image.alt
@@ -47,36 +47,39 @@ function StartupPageClient({ startup }: StartupPageClientProps) {
 
 
     return (
-        <div className="startup-page ">
-            <StartupHeader
-                title= {startup.title}
-                publishedAt= {startup.publishedAt}
-                viewCount = {startup.viewCount}
-                companyImg = {startup.banner.imageUrl}
-                description = {startup.description}
-                authorImg = {startup.authorImage}
-                authorName = {startup.authorName}
-                authorTag = {startup.authorHandle}
-                category = {startup.category}
 
-            />
+        <main className="container-main-page">
+            <div className="startup-page ">
+                <StartupHeader
+                    title={startup.title}
+                    publishedAt={startup.publishedAt}
+                    viewCount={startup.viewCount}
+                    companyImg={startup.banner.imageUrl}
+                    description={startup.description}
+                    authorImg={startup.authorImage}
+                    authorName={startup.authorName}
+                    authorTag={startup.authorHandle}
+                    category={startup.category}
 
-            <StartupImageStack
-                imageUrls={imageUrls}
-                onImageClick={openViewer}
-            />
+                />
 
-            {viewerOpen && (
-                <FullScrImageViewer
+                <StartupImageStack
                     imageUrls={imageUrls}
-                    initialIndex={initialIndex}
-                    onClose={closeViewer}
+                    onImageClick={openViewer}
+                />
+
+                {viewerOpen && (
+                    <FullScrImageViewer
+                        imageUrls={imageUrls}
+                        initialIndex={initialIndex}
+                        onClose={closeViewer}
                     />
-            )}
+                )}
 
-            <PitchDetails pitchDetails={startup.pitchDetails}/>
+                <PitchDetails pitchDetails={startup.pitchDetails} />
 
-        </div>
+            </div>
+        </main>
     );
 }
 

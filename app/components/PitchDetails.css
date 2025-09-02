@@ -1,28 +1,35 @@
 /* Styling for headings */
 .pitch-details h1 {
-  font-size: 2.25rem; /* text-4xl */
-  font-weight: 700;   /* font-bold */
+  font-size: 2.25rem;
+  /* text-4xl */
+  font-weight: 700;
+  /* font-bold */
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
 .pitch-details h2 {
-  font-size: 1.875rem; /* text-3xl */
-  font-weight: 700;    /* font-bold */
+  font-size: 1.875rem;
+  /* text-3xl */
+  font-weight: 700;
+  /* font-bold */
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
 }
 
 .pitch-details h3 {
-  font-size: 1.5rem;   /* text-2xl */
-  font-weight: 600;    /* font-semibold */
+  font-size: 1.5rem;
+  /* text-2xl */
+  font-weight: 600;
+  /* font-semibold */
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
 
 /* Styling for normal paragraphs */
 .pitch-details p {
-  line-height: 1.625; /* leading-relaxed */
+  line-height: 1.625;
+  /* leading-relaxed */
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
@@ -32,7 +39,8 @@
 .pitch-details ol {
   list-style-position: inside;
   margin-bottom: 1rem;
-  padding-left: 1.5rem; /* Add some padding for indentation */
+  padding-left: 1.5rem;
+  /* Add some padding for indentation */
 }
 
 .pitch-details ul {
@@ -45,7 +53,8 @@
 
 /* Styling for links */
 .pitch-details a {
-  color: #2563eb; /* A shade of blue */
+  color: #2563eb;
+  /* A shade of blue */
   text-decoration: none;
 }
 
@@ -55,5 +64,33 @@
 
 /* Styling for emphasis */
 .pitch-details em {
-  color: #6b7280; /* A shade of gray */
+  color: #6b7280;
+  /* A shade of gray */
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .pitch-details h2 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .pitch-details h2 {
+    font-size: 1.5rem;
+  }
+
+  .pitch-details h3 {
+    font-size: 1rem;
+  }
+
+  .pitch-details p {
+    margin: 1.5rem 0rem;
+    text-align: justify;
+    hyphens: auto;
+  }
+
+  .pitch-details li {
+    text-align: justify;
+    hyphens: auto;
+  }
 }
