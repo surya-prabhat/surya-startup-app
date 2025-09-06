@@ -8,10 +8,12 @@ async function Create() {
     const session = await auth()
 
     return (
-        <div className="create-page">
-            <CreateLeft/>
-            <CreateRightForm />
-        </div>
+        <main className="container-main-page">
+            <div className="create-page">
+                <CreateLeft />
+                <CreateRightForm />
+            </div>
+        </main>
 
     );
 }

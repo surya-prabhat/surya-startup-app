@@ -5,12 +5,41 @@
 }
 
 
-@media (max-width: 1024px) {
+
+.container-main-page {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+
     .create-page {
+        display: flex;
         flex-direction: column;
-        gap: 10rem;
+        width: auto;
+        gap: 12.5rem;
     }
-    body {
-        width: max-content;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    .create-page {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        gap: 12.5rem;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+
+    .create-page {
+        margin: 0px 1rem;
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        gap: 12.5rem;
     }
 }

@@ -130,8 +130,45 @@ textarea {
     color: #faf4ee;
 }
 
-@media (max-content: 1024px) {
+@media (min-width: 1024px) and (max-width: 1439px) {
+
     .create-right-form {
         margin-left: 0px;
+        width: 100%;
+    }
+
+    .quill {
+        width: 100%;
+        height: 15rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    .create-right-form {
+        margin-left: 0px;
+        width: 100%;
+    }
+
+    .quill {
+        width: 100%;
+        height: 15rem;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+
+    .create-right-form {
+        margin-left: 0px;
+        width: 100%;
+    }
+
+    .quill {
+        width: 100%;
+        height: 15rem;
+    }
+
+    .file-name {
+        font-size: 0.75rem;
     }
 }

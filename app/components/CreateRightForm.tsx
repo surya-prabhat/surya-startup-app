@@ -147,21 +147,21 @@ function CreateRightForm() {
             </div>
 
             <div className="form-description">
-                <label className="create-right-label" htmlFor="images">Upload Your Images (Max 5)</label>
+                <label className="create-right-label" htmlFor="images">Upload Your Images</label>
                 <input
                     className="create-right-namecat"
                     type="file"
                     id="images"
                     accept="image/*"
                     multiple
-                    onChange={(e) => setForm({ ...form, images: Array.from(e.target.files!).slice(0, 5) })} />
+                    onChange={(e) => setForm({ ...form, images: Array.from(e.target.files!).slice(0, 10) })} />
                 {form.images.length > 0 && (
                     <span className="file-name">
                         {form.images.length} file(s) chosen
                     </span>
                 )}
                 {form.images.length === 0 && (
-                    <span className="file-name">No files chosen</span>
+                    <span className="file-name">No files chosen(Max - 5 files/ 800kb per file)</span>
                 )}
             </div>
 

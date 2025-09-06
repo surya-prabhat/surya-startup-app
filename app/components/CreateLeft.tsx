@@ -33,6 +33,13 @@ function CreateLeft() {
                         altText="Startup Desc image"
                     />
                 </div>
+
+                <div className="image-holder-create-page">
+                    <ImageCard
+                        imageSrc="/cherful-positive-young-colleagues-using-laptop-computer.jpg"
+                        altText="Startup Desc image"
+                    />
+                </div>
             </div>
 
             <div className="purple-grad-create-left"></div>

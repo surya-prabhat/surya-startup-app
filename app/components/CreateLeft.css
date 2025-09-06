@@ -64,27 +64,147 @@
     left: -5rem;
 }
 
-@media (max-width:1024px){
+.image-holder-create-page:nth-of-type(3) {
+    display: none;
+}
+
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+
     .create-left {
-        display: flex;
-        gap: 21.125rem;
         margin-right: 0px;
+        display: flex;
         align-items: center;
+        justify-content: space-between;
     }
 
     .create-left-header {
-        width: 39.375rem;
+        width: 33.375rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+
+    .create-left-h1 {
+        line-height: 3.375rem;
+        font-size: 2.25rem;
+    }
+
+    .create-left-p {
+        font-size: 1rem;
     }
 
     .purple-grad-create-left {
-        left: 49.375rem;
-        top: 28.75rem;
+        margin-left: auto;
+        right: 0.75rem;
+        top: 17.125rem;
     }
 
-    .quill {
-        width: 69.75rem;
-        height: 20rem;
+    .image-holder-create-page:nth-of-type(1) {
+        top: 8.75rem;
+        right: 10.5rem;
+    }
+
+
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    .create-left {
+        margin-right: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .create-left-header {
+
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+
+    .create-left-h1 {
+        text-align: center;
+    }
+
+    .create-left-p {
+        text-align: center;
+    }
+
+    .purple-grad-create-left {
+        margin-left: auto;
+        right: 0.75rem;
+        top: 39.125rem;
+    }
+
+    .image-holder-create-page:nth-of-type(1) {
+        top: 8.75rem;
+        right: 12.5rem;
+    }
+
+    .image-cards-create-page {
+        margin-left: auto;
+    }
+
+    .image-holder-create-page:nth-of-type(3) {
+        display: block;
+        position: absolute;
+        right: 25rem;
+        top: 17.5rem;
     }
 }
 
 
+@media (min-width: 320px) and (max-width: 767px) {
+
+    .create-left {
+        margin-right: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .create-left-header {
+
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+
+    .create-left-h1 {
+        text-align: center;
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+
+    .create-left-p {
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .purple-grad-create-left {
+        display: none;
+        margin-left: auto;
+        right: 0.75rem;
+        top: 39.125rem;
+    }
+
+    .image-holder-create-page:nth-of-type(1) {
+        top: 8.75rem;
+        right: 10.5rem;
+    }
+
+    .image-cards-create-page {
+        margin-left: auto;
+    }
+
+    .image-holder-create-page:nth-of-type(3) {
+        display: block;
+        position: absolute;
+        right: 21rem;
+        top: 17.5rem;
+    }
+}
