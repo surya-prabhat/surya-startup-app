@@ -27,9 +27,20 @@ export async function POST(req: Request) {
             return NextResponse.json({ message: 'Missing required fields' }, { status: 400 })
         }
 
-        const author = await mutationClient.fetch(`*[_type == 'author' && handle == $handle][0]`,
+        let author = await mutationClient.fetch(`*[_type == 'author' && handle == $handle][0]`,
             { handle: session.user.name }
+
         )
+
+        if (!author) {
+            const newAuthor = {
+                _type: 'author',
+                name: session.user.name
+            }
+            author = await mutationClient.create(newAuthor)
+        }
+
+        console.log(session.user.name)
 
         const uploadPromises = [
             logoFile ? mutationClient.assets.upload('image', Buffer.from(await logoFile.arrayBuffer()), { filename: logoFile.name }) : Promise.resolve(null),
