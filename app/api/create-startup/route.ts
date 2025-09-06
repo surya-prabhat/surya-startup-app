@@ -35,7 +35,9 @@ export async function POST(req: Request) {
         if (!author) {
             const newAuthor = {
                 _type: 'author',
-                name: session.user.name
+                name: session.user.name,
+                handle: session.user.name,
+                profileImage: session.user.image
             }
             author = await mutationClient.create(newAuthor)
         }
