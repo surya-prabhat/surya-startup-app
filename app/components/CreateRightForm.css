@@ -171,4 +171,19 @@ textarea {
     .file-name {
         font-size: 0.75rem;
     }
+
+    .create-right-namecat {
+        height: 6.25rem;
+        border-radius: 1.25rem;
+    }
+
+    .submit-button {
+        margin-bottom: 2rem;
+        margin-top: 4.5rem;
+    }
+
+    .create-right-description {
+        height: 6.25rem;
+        border-radius: 1.25rem;
+    }
 }

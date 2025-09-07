@@ -107,6 +107,12 @@
 
 }
 
+@media (min-width: 1024px) and (max-width: 1439px) {
+    .idea-description {
+        width: 39rem;
+    }
+}
+
 @media (min-width: 768px) and (max-width: 1023px) {
     .idea-name {
         font-size: 1.5rem;
