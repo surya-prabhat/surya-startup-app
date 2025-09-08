@@ -44,24 +44,24 @@ export default function Home() {
 
           <div className="image-holder">
             <ImageCard
-              imageSrc="/cherful-positive-young-colleagues-using-laptop-computer.jpg"
+              imageSrc="/krakenimages-Y5bvRlcCx8k-unsplash.jpg"
               altText="Startup Desc image"
             />
 
             <ImageCard
-              imageSrc="/cherful-positive-young-colleagues-using-laptop-computer.jpg"
+              imageSrc="/brooke-cagle--uHVRvDr7pg-unsplash (1).jpg"
               altText="Startup Desc image"
             />
           </div>
 
           <div className="image-holder">
             <ImageCard
-              imageSrc="/cherful-positive-young-colleagues-using-laptop-computer.jpg"
+              imageSrc="/krakenimages-376KN_ISplE-unsplash.jpg"
               altText="Startup Desc image"
             />
 
             <ImageCard
-              imageSrc="/cherful-positive-young-colleagues-using-laptop-computer.jpg"
+              imageSrc="/jason-goodman-Ti7LQ0r-zy4-unsplash.jpg"
               altText="Startup Desc image"
             />
           </div>

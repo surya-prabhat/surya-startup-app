@@ -18,9 +18,8 @@ function ImageCard({ imageSrc, altText }: ImageCardProps) {
                 src={imageSrc}
                 alt={altText}
                 fill
+                
                 />
-
-
             </div>
         </div>
      );

@@ -169,6 +169,7 @@
 
     .create-left-header {
 
+        margin-top: 4rem;
         display: flex;
         flex-direction: column;
         gap: 1.25rem;
@@ -221,6 +222,7 @@
 
     .create-left-header {
 
+        margin-top: 4rem;
         display: flex;
         flex-direction: column;
         gap: 1.25rem;

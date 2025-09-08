@@ -9,6 +9,9 @@
 
 .image-card-contain {
   object-fit: cover;
+  overflow: visible;
+  height: 100%;
+
 }
 
 .image-card:hover {

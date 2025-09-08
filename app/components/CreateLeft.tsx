@@ -12,24 +12,24 @@ function CreateLeft() {
             <div className="image-cards-create-page">
                 <div className="image-holder-create-page">
                     <ImageCard
-                        imageSrc="/cherful-positive-young-colleagues-using-laptop-computer.jpg"
+                        imageSrc="/joseph-menjivar-ihvIO4KPsTY-unsplash.jpg"
                         altText="Startup Desc image"
                     />
 
                     <ImageCard
-                        imageSrc="/cherful-positive-young-colleagues-using-laptop-computer.jpg"
+                        imageSrc="/mika-baumeister-Y_LgXwQEx2c-unsplash.jpg"
                         altText="Startup Desc image"
                     />
                 </div>
 
                 <div className="image-holder-create-page">
                     <ImageCard
-                        imageSrc="/cherful-positive-young-colleagues-using-laptop-computer.jpg"
+                        imageSrc="/lala-azizli-u0lBTIZgb-g-unsplash.jpg"
                         altText="Startup Desc image"
                     />
 
                     <ImageCard
-                        imageSrc="/cherful-positive-young-colleagues-using-laptop-computer.jpg"
+                        imageSrc="/kit-formerly-convertkit-UxAyOE3i2Rw-unsplash.jpg"
                         altText="Startup Desc image"
                     />
                 </div>

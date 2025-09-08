@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 import Image from "next/image";
 import { auth, signIn, signOut } from "@/app/auth"
@@ -5,9 +6,11 @@ import "./NavBar.css"
 
 
 
+
 async function NavBar() {
 
     const session = await auth()
+
 
 
     return (
@@ -35,6 +38,7 @@ async function NavBar() {
                                 </Link> */}
                             </form>
 
+
                         </>
 
                     ) : (
@@ -47,6 +51,8 @@ async function NavBar() {
 
                     )}
                 </div>
+
+                
             </div>
         </>
     );

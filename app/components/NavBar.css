@@ -56,3 +56,28 @@
     transition: all 0.2s cubic-bezier(0.44, 0, 0.56, 1);
 
 }
+
+@media (min-width: 320px) and (max-width: 425px) {
+    .navBar {
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0.75rem 1rem;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .sign-in {
+        font-size: 1rem;
+        padding: 0.5rem 7.25rem;
+    }
+
+    .create {
+        padding: 0.7rem 2.6rem;
+        font-size: 1rem;
+    }
+
+    .sign-out {
+        padding: 0.4rem 2rem;
+        font-size: 1rem;
+    }
+}
