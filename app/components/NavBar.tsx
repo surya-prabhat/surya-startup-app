@@ -17,7 +17,7 @@ async function NavBar() {
         <>
             <div className="navBar">
                 <Link className="logo" href="/">
-                    <Image src="/Group 5.png" alt="Surya-app-Logo" width={144} height={144}></Image>
+                    <Image src="/The_hivemind_logo-removebg-preview.png" alt="Surya-app-Logo" width={144} height={144}></Image>
                 </Link>
 
                 <div className="auth">
